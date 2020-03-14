@@ -36,7 +36,8 @@ pull_plots <- function(ch_file) {
 count_plots <- function(ch_file) {
   # Counts plots in the chapter folder 
   # Args: 
-  #  ch_file: name of the folder in _bookdown_files as a character type
+  #  ch_file: name of the folder in _bookdown_files as a character type 
+  # Returns: numeric
   
   # Check to see if the figure-html file exists in the folder
   if (file.exists(
