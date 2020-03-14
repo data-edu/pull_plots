@@ -28,7 +28,7 @@ pull_plots <- function(ch_file) {
       here::here("_bookdown_files", ch_file, "figure-html"), full.names = TRUE
       ) 
     # Copy each figure to the output folder 
-    file_paths %>% walk(~file.copy(from = .x, to = here::here("output")))
+    file_paths %>% purrr::walk(~file.copy(from = .x, to = here::here("output")))
     
   }
 }
@@ -36,5 +36,5 @@ pull_plots <- function(ch_file) {
 
 # Copy files --------------------------------------------------------------
 
-# Map 
+# Copy plots to the output folder   
 folders %>% walk(pull_plots)
